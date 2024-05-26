@@ -18,4 +18,4 @@ class Buyer(Base):
     updated_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     def __repr__(self):
-        return f'Buyer(id={self.id}, name={self.name}, email={self.email})'
+        return f'Buyer(id={self.id}, name={self.first_name}, email={self.email})'
