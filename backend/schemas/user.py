@@ -6,7 +6,7 @@ class UserSchema(BaseModel):
     first_name: str
     last_name: str
     email: EmailStr
-    phone: str
+    phone_number: str
     password: str
 
     @validator('email')
