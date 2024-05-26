@@ -1,7 +1,7 @@
 import { useState } from 'react'
 // import Example from './components/LandingPage'
-// import SignIn from './components/SignIn'
-// import SignUp from './components/SignUp'
+import SignIn from './components/SignIn'
+import SignUp from './components/SignUp'
 import PropertyForm from './components/PropertyForm'
 function App() {
   const [count, setCount] = useState(0)
@@ -10,8 +10,8 @@ function App() {
     <>
       {/* <Example/> */}
       {/* <SignIn/> */}
-      {/* <SignUp/> */}
-      <PropertyForm/>
+      <SignUp/>
+      {/* <PropertyForm/> */}
 
     </>
   )
