@@ -1,9 +1,6 @@
 //implement singin function based component
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-// import { ExclamationCircleIcon } from '@heroicons/react/20/solid';
-
 
 
 export default function SignIn() {
@@ -50,9 +47,8 @@ export default function SignIn() {
           />
           <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900">Sign in to your account</h2>
           <p className="mt-2 text-sm text-center text-gray-600">
-            Or{' '}
             <a className="font-medium text-indigo-600 hover:text-indigo-500">
-              start your 14-day free trial
+              Not a member Register
             </a>
           </p>
         </div>
