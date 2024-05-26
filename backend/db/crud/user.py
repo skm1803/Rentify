@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from db.models.buyer import Buyer
 from schemas.user import UserSchema
 from utils.security import Hasher
+from db.models.buyer import Buyer
 
 
 def create_user(db: Session, user: UserSchema):
@@ -13,3 +14,8 @@ def create_user(db: Session, user: UserSchema):
     db.commit()
     db.refresh(db_user)
     return db_user
+
+
+def get_user(email: str, db: Session):
+    user = db.query(Buyer).filter(Buyer.email == email).first()
+    return user
