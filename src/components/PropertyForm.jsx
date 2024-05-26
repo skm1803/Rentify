@@ -1,21 +1,11 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+import NavHeader from './Header/NavHeader'
 
 export default function PropertyForm() {
   return (
+    <>
+    <NavHeader/>
     <form>
       <div className="space-y-12 p-10">
 
@@ -193,5 +183,6 @@ export default function PropertyForm() {
         </button>
       </div>
     </form>
+    </>
   )
 }

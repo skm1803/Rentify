@@ -1,7 +1,8 @@
 //implement singin function based component
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
+import NavHeader from './Header/NavHeader';
 
 export default function SignIn() {
   const [user, setUser] = useState({
@@ -38,6 +39,7 @@ export default function SignIn() {
   };  
   return (  
     <>
+    <NavHeader/>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
@@ -47,9 +49,9 @@ export default function SignIn() {
           />
           <h2 className="mt-6 text-3xl font-extrabold text-center text-gray-900">Sign in to your account</h2>
           <p className="mt-2 text-sm text-center text-gray-600">
-            <a className="font-medium text-indigo-600 hover:text-indigo-500">
+            <Link to= "/SignUp" className="font-medium text-indigo-600 hover:text-indigo-500">
               Not a member Register
-            </a>
+            </Link>
           </p>
         </div>
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
