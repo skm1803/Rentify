@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import NavHeader from "./Header/NavHeader";
 
 export default function SignUp() {
   const [user, setUser] = useState({
@@ -19,17 +21,6 @@ export default function SignUp() {
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission
-//     curl -X 'POST' \
-//   'http://127.0.0.1:8000/v1/signup' \
-//   -H 'accept: application/json' \
-//   -H 'Content-Type: application/json' \
-//   -d '{
-//   "first_name": "string",
-//   "last_name": "string",
-//   "email": "user@example.com",
-//   "phone_number": "string",
-//   "password": "string"
-// }'
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/v1/signup",
@@ -53,6 +44,7 @@ export default function SignUp() {
   };
   return (
     <>
+    <NavHeader/>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
@@ -191,12 +183,12 @@ export default function SignUp() {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not a member?{" "}
-            <a
-              href="#"
+            <Link
+              to="/SignIn"
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
-              Start a 14 day free trial
-            </a>
+             Have an account? Sign in
+            </Link>
           </p>
         </div>
       </div>

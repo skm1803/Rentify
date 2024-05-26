@@ -3,6 +3,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
+import NavHeader from './Header/NavHeader'
 
 export default function PropertyForm() {
   const [property, setProperty] = useState({
@@ -41,6 +42,8 @@ export default function PropertyForm() {
   }
 
   return (
+    <>
+    <NavHeader/>
     <form>
       <div className="space-y-12 p-10">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10  border-gray-900/10 pb-12 md:grid-cols-3">
@@ -243,5 +246,6 @@ export default function PropertyForm() {
         </button>
       </div>
     </form>
+    </>
   );
 }

@@ -19,6 +19,7 @@ const router = createBrowserRouter([
   { path: '/', element: <App /> },
   { path: '/signin', element: <SignIn /> },
   { path: '/signup', element: <SignUp /> },
+<<<<<<< HEAD
   { path: '/property', element: <PropertyForm /> },
   { path: '/properties', element: <PropertyList /> },
   { path: '/property/:id', element: <PropertyDetails /> },
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   { path: '/seller/:id/properties', element: <PropertiesBySeller /> },
   { path: '/property/:id/update', element: <UpdateProperty /> },
   { path: '/property/:id/delete', element: <DeleteProperty /> },
+=======
+  { path: '/property', element: <PropertyForm/> },
+
+>>>>>>> 452560d5859b93a84b8bbcdfdaea6a43b048882e
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
